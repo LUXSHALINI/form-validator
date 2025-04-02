@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
 
- 
-
     function checkPasswordStrength(password) {
         if (password.length < 6) {
             strengthMeter.style.background = "red"; 
