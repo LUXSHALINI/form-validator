@@ -12,21 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
 
-    function validateInput(input, regex) {
-        if (!regex.test(input.value)) {
-            input.style.border = "2px solid red";
-            return false;
-        } else {
-            input.style.border = "2px solid green";
-            return true;
-        }
-    }
+ 
 
     function checkPasswordStrength(password) {
         if (password.length < 6) {
             strengthMeter.style.background = "red"; 
             strengthMeter.textContent = "Weak";
-        } else if (password.length >= 6 && password.length < 8) {
+        } else if (password.length < 8) {
             strengthMeter.style.background = "orange"; 
             strengthMeter.textContent = "Medium";
         } else if (passwordRegex.test(password)) {
